@@ -104,7 +104,8 @@ const binhThuanUnits = new Set([
 ]);
 function normalizedAreaName(f){
  let n=String(nameOf(f)).normalize('NFC').trim();
- n=n.replace(/^(xã|phường|đặc khu|thị trấn)\\s+/i,'');
+ n=n.replace(/^(xã|phường|đặc khu|thị trấn)[\s]+/i,'');
+ n=n.replace(/\s+/g,' ').trim();
  return n.toLocaleLowerCase('vi');
 }
 const binhThuanKeys = new Set([...binhThuanUnits].map(n=>n.normalize('NFC').toLocaleLowerCase('vi')));

@@ -45,7 +45,7 @@ input[type=search]{width:100%;border:1px solid #d4dfdc;border-radius:8px;padding
 <script>
 const firebaseConfig={apiKey:"AIzaSyDl0UmlKUKWxHscS9dwIpy9-qY8X6_UN8A",authDomain:"bandodongbangsonghong.firebaseapp.com",databaseURL:"https://bandodongbangsonghong-default-rtdb.asia-southeast1.firebasedatabase.app",projectId:"bandodongbangsonghong",storageBucket:"bandodongbangsonghong.firebasestorage.app",messagingSenderId:"110123612719",appId:"1:110123612719:web:9177913cfd267eaaf664da",measurementId:"G-Y2PHZ03RR7"};
 // false = người truy cập chỉ xem; true = bật lại chức năng chỉnh sửa
-const EDIT_MODE = true;
+const EDIT_MODE = false;
 if (!EDIT_MODE) document.body.classList.add('read-only');
 firebase.initializeApp(firebaseConfig);const sharedRef=firebase.database().ref('lamdongMap');let cloudReady=false,cloudDebounce=null;
 function pushShared(){
